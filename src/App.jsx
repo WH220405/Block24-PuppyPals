@@ -1,9 +1,6 @@
 import { useState} from 'react'
 //useState to refllect the updated data.
 import {puppyList} from './data.js'
-
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
 import './App.css'
 
 
@@ -13,14 +10,8 @@ function App() {
   // second is a function which you can use to reset the value
   const [puppies, setPuppies] = useState(puppyList)
    console.log("puppyList: ", puppyList);
-
    const [featPupId, setFeatPupId] = useState(null) // set the defauly to null
    //console.log("puppy id: ", puppy.id)
-
-  //  function handleClick() {
-  //   setFeatPupId(puppy.id);
-  //   //setPuppies(pyppy.name);
-  //  }
 
    const featuredPup = puppies.find((pup)=> pup.id === featPupId)
    console.log(featuredPup);
@@ -37,11 +28,9 @@ function App() {
           <ul>
             <li>Ag: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
-          
           </ul>
         </div>
       )}
-
       {
         puppies.map((puppy)=> {
           return (
@@ -49,11 +38,9 @@ function App() {
           key= {puppy.id}>{puppy.name}
           </button>
           )  
-        })
-      }
-      
+        })}
     </div>
-  )
-}
+  )}
+
 
 export default App
