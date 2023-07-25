@@ -40,3 +40,26 @@
 .read-the-docs {
   color: #888;
 }
+
+h1{
+  color: brown;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-top: 30px;
+}
+ body{
+  background-color: cornflowerblue;
+ }
+ li{
+  font-weight: 700;
+  
+ }
+
+ button{
+  display: grid;
+  margin: 20px;
+  text-align: center;
+ }
+
+ .puppyList {
+  list-style: decimal;
+ }

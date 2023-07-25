@@ -6,6 +6,7 @@ import {puppyList} from './data.js'
 //import viteLogo from '/vite.svg'
 import './App.css'
 
+
 function App() {
   //invoke the hook, usestate return an array an arr contains two element
   // first is the value that storing
@@ -13,13 +14,41 @@ function App() {
   const [puppies, setPuppies] = useState(puppyList)
    console.log("puppyList: ", puppyList);
 
-  //console.log(puppies, setPuppies)
+   const [featPupId, setFeatPupId] = useState(null) // set the defauly to null
+   //console.log("puppy id: ", puppy.id)
+
+  //  function handleClick() {
+  //   setFeatPupId(puppy.id);
+  //   //setPuppies(pyppy.name);
+  //  }
+
+   const featuredPup = puppies.find((pup)=> pup.id === featPupId)
+   console.log(featuredPup);
+   
 
   return (
     <div className="App">
+      <h1>Puppy Pals List</h1>
+      <h3>Click puppy's name to show their address</h3>
+      { featPupId && <p>{featPupId}</p>}
+      {featPupId && (
+        <div>
+          <h2>{featuredPup.name}</h2>
+          <ul>
+            <li>Ag: {featuredPup.age}</li>
+            <li>Email: {featuredPup.email}</li>
+          
+          </ul>
+        </div>
+      )}
+
       {
         puppies.map((puppy)=> {
-          return <p key= {puppy.id}>{puppy.name}</p>
+          return (
+          <button onClick={()=>{ setFeatPupId(puppy.id)}} 
+          key= {puppy.id}>{puppy.name}
+          </button>
+          )  
         })
       }
       

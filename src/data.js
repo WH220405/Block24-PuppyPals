@@ -9,6 +9,7 @@ export const puppyList = [
       tricks: [
         { id: 2, title: "Lay Down" },
         { id: 3, title: "Jump through flaming hoop" },
+        <img src="https://media.istockphoto.com/id/1302660208/photo/corgi-pembroke-puppy-on-sea-coast-dog-beach-and-walking-concept-world-pet-day-concept-image.webp?b=1&s=170667a&w=0&k=20&c=Tf0poSy_zJUL97HE2hVx8DILSbjMXEwHyfmSBIh1S6Q=" />
       ],
     },
     {
