@@ -58,6 +58,7 @@ h1{
   display: grid;
   margin: 20px;
   text-align: center;
+  width: 400px;
  }
 
  .puppyContainer {
