@@ -26,17 +26,20 @@ function App() {
         <div>
           <h2>{featuredPup.name}</h2>
           <ul>
-            <li>Ag: {featuredPup.age}</li>
+            <li>Age: {featuredPup.age}</li>
             <li>Email: {featuredPup.email}</li>
           </ul>
         </div>
       )}
       {
-        puppies.map((puppy)=> {
+        puppies.map((puppy, index)=> {
           return (
-          <button onClick={()=>{ setFeatPupId(puppy.id)}} 
+            <div className='puppyContainer'>
+              <p className='puppyNumber'>{index + 1}</p>
+          <button className='puppyButton' onClick={()=>{ setFeatPupId(puppy.id)}} 
           key= {puppy.id}>{puppy.name}
           </button>
+          </div>
           )  
         })}
     </div>

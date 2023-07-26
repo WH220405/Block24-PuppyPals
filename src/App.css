@@ -51,12 +51,21 @@ h1{
  }
  li{
   font-weight: 700;
-  
+  list-style: none;
  }
 
  button{
   display: grid;
   margin: 20px;
   text-align: center;
+ }
+
+ .puppyContainer {
+  display: flex;
+ }
+
+ .puppyNumber {
+  font-size: 20px;
+  font-weight: bold;
  }
 
